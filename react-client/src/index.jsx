@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
+import Search from './components/Search.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      items: []
+      mealPlan: [];
+      cal: ''
     }
+    this.search.bind(this);
   }
 
   componentDidMount() {
@@ -16,7 +19,7 @@ class App extends React.Component {
       url: '/items', 
       success: (data) => {
         this.setState({
-          items: data
+          mealPlan: data
         })
       },
       error: (err) => {
@@ -25,11 +28,28 @@ class App extends React.Component {
     });
   }
 
-  
+  search(cal) {
+    //this function will be a POST request
+    //input: number of calories 
+    //make a ajax  post request to server 
+    $.ajax({
+      url: '/cal/imports',
+      data: cal,
+      method: 'POST',
+      success: (data) => {
+        let data = $.parseJSON(data);
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
   render () {
     return (<div>
-      <h1>Item List</h1>
-      <List items={this.state.items}/>
+      <h1>Meal Plan</h1>
+      <Search search={this.search}/>
+      <List items={this.state.mealPlan}/>
     </div>)
   }
 }

@@ -1,18 +1,30 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-// UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-// var items = require('../database-mysql');
-// var items = require('../database-mongo');
+var request = require('request');
+
+var items = require('../database-mongo');
 
 var app = express();
 
-
-// UNCOMMENT FOR REACT
 app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser());
-// UNCOMMENT FOR ANGULAR
-// app.use(express.static(__dirname + '/../angular-client'));
-// app.use(express.static(__dirname + '/../node_modules'));
+
+app.post('/cal/imports', function(req, res) {
+
+  //specified by user. 
+  //need to make an options object:
+  var options = {
+    method: 'GET',
+    url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=${req.body.calories}&timeFrame=${req.body.timeFrame}`,
+        //https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=2000&timeFrame=day"
+    
+    "X-Mashape-Key": "KUyLEZ1R3ymshjjeyOdPbobao4k8p1kXFyUjsn8zpSUdA3wVXv",
+    "Accept": "application/jason"
+  }
+  request(options, function(err, response, body) {
+
+  })
+});
 
 app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
@@ -23,6 +35,8 @@ app.get('/items', function (req, res) {
     }
   });
 });
+
+
 
 app.listen(3000, function() {
   console.log('listening on port 3000!');
