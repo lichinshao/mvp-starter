@@ -6,9 +6,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+
 // UNCOMMENT FOR REACT
 app.use(express.static(__dirname + '/../react-client/dist'));
-
+app.use(bodyParser());
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
