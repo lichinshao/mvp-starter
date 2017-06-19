@@ -15,7 +15,7 @@ app.post('/cal/imports', function(req, res) {
   //need to make an options object:
   var options = {
     method: 'GET',
-    url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=${req.body.calories}&timeFrame=${req.body.timeFrame}`,
+    url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=${req.body.calories}&timeFrame=week`,
         //https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?targetCalories=2000&timeFrame=day"
     
     "X-Mashape-Key": "KUyLEZ1R3ymshjjeyOdPbobao4k8p1kXFyUjsn8zpSUdA3wVXv",

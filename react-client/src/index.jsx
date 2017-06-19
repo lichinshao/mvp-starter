@@ -8,10 +8,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      mealPlan: [];
-      cal: ''
+      mealPlan: [],
+      cal: 0
     }
-    this.search.bind(this);
+    // this.search.bind(this);
   }
 
   componentDidMount() {
@@ -19,7 +19,8 @@ class App extends React.Component {
       url: '/items', 
       success: (data) => {
         this.setState({
-          mealPlan: data
+          mealPlan: data,
+          cal: 1500
         })
       },
       error: (err) => {
@@ -28,16 +29,18 @@ class App extends React.Component {
     });
   }
 
-  search(cal) {
-    //this function will be a POST request
-    //input: number of calories 
-    //make a ajax  post request to server 
+  handleChange(e) {
+    console.log(e.target.value);
+    this.setState({cal: e.target.value});
+  }
+
+  search() {
     $.ajax({
       url: '/cal/imports',
-      data: cal,
+      data: this.state.cal,
       method: 'POST',
       success: (data) => {
-        let data = $.parseJSON(data);
+        console.log(data);
 
       },
       error: (err) => {
@@ -47,8 +50,8 @@ class App extends React.Component {
   }
   render () {
     return (<div>
-      <h1>Meal Plan</h1>
-      <Search search={this.search}/>
+      <h1>Weekly Meal Plan</h1>
+      <Search search={this.search.bind(this)} onChange={this.handleChange.bind(this)}/>
       <List items={this.state.mealPlan}/>
     </div>)
   }

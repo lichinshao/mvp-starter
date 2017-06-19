@@ -3,8 +3,8 @@ import React from 'react';
 const Search = (props) => {
 	return (
 		<div>
-			<input id="searchInput" placeholder="desired calorie limit" type="text"/>
-			<button id="searchButton" onClick={props.search(event.target.value)}>Find Meal Plan!</button>
+			<input id="searchInput" placeholder="desired calorie limit" type="text" onChange={props.onChange}/>
+			<button id="searchButton" onClick={props.search}>Find Meal Plan!</button>
 		</div>
 )}
 
