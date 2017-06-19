@@ -17,28 +17,31 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  Food for Thought
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  A web-based app where anyone can search popular recipes given any ingredient. 
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Food for Thought is an app where consumers can search recipes based on particular ingredients specified by the user. Users will be able to read descriptions, list of ingredients necessary to make the dish, and directions. All search values will be accompanied by a picture of searched dishes for their convenience in their selection process. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  Deciding what to have for lunch or dinner is a thought that everyone experiences on a daily basis. Whether a person is having a specific craving or having the time to go to the grocery store just seems like a luxury, a big part of the deciding factor on what to cook at home is what ingredient (ie: type of protein, vegetables, etc) may be readily available to produce the perfect meal. Now... what to cook?? 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  Food for thought allows any user to input an ingredient of their choice and will conveniently assist the user in their decision making process by displaying all possible recipes with that target ingredient. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  "Food an feed your stomach, but it can also feed your passion."
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  Insert an ingredient of your choice and discover what your next meal can be! 
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "Being a mother of 4, making it to the grocery store just seems impossible. More often than not, I find myself flipping through the pantry and producing a meal for my kids that has been usual and have reached the stage of being "boring". Food for thought allows me to search recipes that may include similar ingredients, but I'm able to finally feed my kids "something new" for a change!". 
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  Please visit (url link here) to your next meal!! 
+
+
+  
