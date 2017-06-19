@@ -20,25 +20,25 @@ Once the project moves into development, the press release can be used as a touc
   Food for Thought
 
 ## Sub-Heading ##
-  A web-based app where anyone can search popular recipes given any ingredient. 
+  A web-based app where anyone can search popular recipes given a target caloric intake maximum value. 
 
 ## Summary ##
-  Food for Thought is an app where consumers can search recipes based on particular ingredients specified by the user. Users will be able to read descriptions, list of ingredients necessary to make the dish, and directions. All search values will be accompanied by a picture of searched dishes for their convenience in their selection process. 
+  Food for Thought is an app where consumers can search recipes based on their target caloric limit per day. Users will be able to read descriptions, list of ingredients necessary to make the dish, and directions. All search values will be accompanied by a picture of searched dishes for their convenience in their selection process. 
 
 ## Problem ##
-  Deciding what to have for lunch or dinner is a thought that everyone experiences on a daily basis. Whether a person is having a specific craving or having the time to go to the grocery store just seems like a luxury, a big part of the deciding factor on what to cook at home is what ingredient (ie: type of protein, vegetables, etc) may be readily available to produce the perfect meal. Now... what to cook?? 
+  Deciding what to have for lunch or dinner is a thought that everyone experiences on a daily basis. With the temptations of fast food, yet, yearning for a healthier life style, a big part of the deciding factor on what to cook at home is based on one's daily caloric limit. Now... what to cook?? 
 
 ## Solution ##
-  Food for thought allows any user to input an ingredient of their choice and will conveniently assist the user in their decision making process by displaying all possible recipes with that target ingredient. 
+  Food for thought allows any user to input their target caloric intake limit and it will conveniently assist the user in their decision making process by displaying all possible recipes with that caloric limit. 
 
 ## Quote from You ##
   "Food an feed your stomach, but it can also feed your passion."
 
 ## How to Get Started ##
-  Insert an ingredient of your choice and discover what your next meal can be! 
+  Insert your desired calorie value and discover what your next meal will be! 
 
 ## Customer Quote ##
-  "Being a mother of 4, making it to the grocery store just seems impossible. More often than not, I find myself flipping through the pantry and producing a meal for my kids that has been usual and have reached the stage of being "boring". Food for thought allows me to search recipes that may include similar ingredients, but I'm able to finally feed my kids "something new" for a change!". 
+  "There was one point in my life that I allowed myself to reach a weight of 300 pounds. It was then and there I decided that I needed to promote a healthier lifestyle, starting with what I love: food. Limiting myself to less than 1500 calories a day gets repetitive and 'Food for Thought' has let me explore a plethora of yummy recipes that allow me to enjoy food, yet, maintain my weight loss limitations! Thank you 'Food for Thought'!"
 
 ## Closing and Call to Action ##
   Please visit (url link here) to your next meal!! 
