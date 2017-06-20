@@ -11,15 +11,18 @@ db.once('open', function() {
   console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+var mealSchema = mongoose.Schema({
+  meal: Array, 
+  totalCal: Number, 
+  totalProtein: Number, 
+  totalFat: Number, 
+  totalCarbs: Number
 });
 
-var Item = mongoose.model('Item', itemSchema);
+var Meal = mongoose.model('Meal', mealSchema);
 
 var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
+  Meal.find({}, function(err, items) {
     if(err) {
       callback(err, null);
     } else {
@@ -29,3 +32,4 @@ var selectAll = function(callback) {
 };
 
 module.exports.selectAll = selectAll;
+module.exports.Meal = Meal;

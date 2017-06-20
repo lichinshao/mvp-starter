@@ -9,18 +9,25 @@ class App extends React.Component {
     super(props);
     this.state = { 
       mealPlan: [],
-      cal: 0
+      cal: 0,
+      nutrition: {}
     }
-    // this.search.bind(this);
   }
 
   componentDidMount() {
     $.ajax({
       url: '/items', 
       success: (data) => {
+        let len = data.length;
+        const random = Math.floor(Math.random() * len);
         this.setState({
-          mealPlan: data,
-          cal: 1500
+          mealPlan: data[random].meal,
+          nutrition: {
+            totalCal: data.totalCal,
+            totalProtein: data.totalProtein,
+            totalFat: data.totalFat,
+            totalCarbs: data.totalCarbs
+          }
         })
       },
       error: (err) => {
@@ -30,29 +37,30 @@ class App extends React.Component {
   }
 
   handleChange(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     this.setState({cal: e.target.value});
   }
 
   search() {
     $.ajax({
       url: '/cal/imports',
-      data: this.state.cal,
+      data: {cal: this.state.cal},
       method: 'POST',
       success: (data) => {
-        console.log(data);
-
+        // console.log($.parseJSON(data));
+        var data = $.parseJSON(data);
+        this.setState({mealPlan: data.meals, nutrition: data.nutrients});
       },
       error: (err) => {
         console.log(err);
       }
+  
     })
-  }
+  }// <h1 id="heading">Weekly Meal Plan</h1>
   render () {
     return (<div>
-      <h1>Weekly Meal Plan</h1>
       <Search search={this.search.bind(this)} onChange={this.handleChange.bind(this)}/>
-      <List items={this.state.mealPlan}/>
+      <List meals={this.state.mealPlan} nutrients={this.state.nutrition}/>
     </div>)
   }
 }

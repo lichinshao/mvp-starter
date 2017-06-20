@@ -1,9 +1,11 @@
 import React from 'react';
 
-const ListItem = (props) => (
+const ListItem = (props) => {
+	return (
   <div>
-    { props.item.description }
+  	<div id="title"><b>{props.meal.title}</b></div>
+  	<img id="picture" src={`https://spoonacular.com/recipeImages/${props.meal.id}-312x231.jpg`}/>
   </div>
-)
+)}
 
 export default ListItem;
